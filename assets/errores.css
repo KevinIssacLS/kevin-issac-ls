@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: Gill Sans;
+    src: url('Tipografías/Gill Sans.otf');
+  }
+
+:root{
+    --Main-color: #6c1d45;
+    --Secondary-color: #9b2242;
+    --Accent-color: #b59461;
+    --Main-text-color: #000000;
+    --Secondary-text-color: #707372;
+    --Accent-text-color: rgb(255, 255, 255);
+    --Main-font: Montserrat;
+}
+
+/* :root{
+    --Main-color: #3A0CA3;
+    --Secondary-color: #480CA8;
+    --Accent-color: #7209B7;
+    --Main-text-color: #FFFFFF;
+    --Secondary-text-color: #707372;
+    --Accent-text-color: #FFFFFF;
+    --Main-font: Gill Sans;
+  } */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--Main-font);
+    color: var(--Accent-text-color);
+}
+.seccion-pagina-404 {
+    background: var(--Main-color);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--Main-color), var(--Secondary-color));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--Main-color), var(--Secondary-color));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.mensaje a {
+  color: inherit;
+  margin-right: .5rem;
+  display: inline-block;
+}
+.mensaje a:hover {
+  color: var(--Accent-color);
+  transform: scale(1.4)
+}
+
+.seccion-pagina-404 .numero-error {
+    display: flex;
+    width: 350px;
+    height: 350px;
+    background-color: var(--Main-color);
+    border-radius: 50%;
+    box-shadow: 0 0 0 150px rgba(0, 0, 0, .2);
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    line-height: 1;
+}
+.seccion-pagina-404 .contenedor-msj {
+    position: relative;
+    width: auto;
+    display: flex;
+    align-items: center;
+    margin-left: 2.5rem;
+}
+.seccion-pagina-404 .numero-error h3 {
+    margin-bottom: 0;
+    z-index: 1;
+    display: inline-block;
+}
+.seccion-pagina-404 .numero-error i {
+    font-size: 10rem;
+    color: var(--Secondary-text-color);
+    margin-right: 1.5rem;
+    position: absolute;
+    left: -5rem;
+    top: -2.5rem;
+}
+
+.seccion-pagina-404 .contenido-error {
+    margin-left: 3rem;
+    background-color: var(--Accent-color);
+    padding: 1.5rem;
+    border-radius: 12px;
+    flex-grow: 1;
+    flex-basis: 0;
+    z-index: 1;
+    box-shadow: 0 0 14px rgba(0, 0, 0, .2);
+}
+.contenido-error .seccion-contenedor {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+.contenido-error .seccion-contenedor:last-child {
+    margin-bottom: 0;
+}
+.contenido-error .seccion-contenedor h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.contenido-error .botones-escape {
+    margin-top: 2rem;
+}
+.boton-escape {
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 1rem;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background-color: var(--Secondary-color);
+    color: #FFFFFF;
+}
+
+
+@media (max-width: 1024px) {
+    .seccion-pagina-404 {
+        flex-direction: column;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+    }
+    .seccion-pagina-404 .numero-error {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        width: 300px;
+        height: 300px;
+    }
+    .seccion-pagina-404 .contenido-error {
+        margin-left: 0;
+    }
+    .seccion-pagina-404 .contenedor-msj {
+        flex-direction: column;
+        margin: 0;
+    }
+    .seccion-pagina-404 .numero-error i {
+        font-size: 4rem;
+        position: relative;
+        margin: 0;
+        top: 0;
+        left: 0;
+    }
+    .botones-escape {
+        text-align: center;
+    }
+  }
